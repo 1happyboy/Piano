@@ -15,8 +15,7 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 BOARD_USE_LOW_MEM := true
-#BOARD_HAVE_BLUETOOTH := false
-BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH := false
 PRODUCT_PACKAGE_OVERLAYS += device/rockchip/rk312x/overlay
 
 #MALLOC_IMPL := dlmalloc
