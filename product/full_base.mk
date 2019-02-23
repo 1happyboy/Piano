@@ -25,9 +25,9 @@ PRODUCT_PACKAGES := \
     libWnnEngDic \
     libWnnJpnDic \
     libwnndict \
-    WAPPushManager
+#    WAPPushManager
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     HoloSpiralWallpaper \
     LiveWallpapers \
     LiveWallpapersPicker \
@@ -35,10 +35,11 @@ PRODUCT_PACKAGES += \
     NoiseField \
     PhaseBeam \
     PhotoTable
-ifneq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), vr)
-PRODUCT_PACKAGES += \
+#ifneq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), vr)
+#PRODUCT_PACKAGES += \
 	Galaxy4
-endif
+#endif
+
 # Additional settings used in all AOSP builds
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.config.ringtone=Ring_Synth_04.ogg \

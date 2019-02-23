@@ -1,0 +1,14 @@
+# Additional rules for untrusted_app
+allow untrusted_app logcat_exec:file { read open execute execute_no_trans getattr };
+allow untrusted_app pekallfmrserver:binder { call transfer };
+allow untrusted_app toolbox_exec:file { read getattr open execute execute_no_trans };
+allow untrusted_app kernel:system { module_request };
+allow untrusted_app video_device:chr_file { read write open ioctl };
+allow untrusted_app kernel:dir { search };
+allow untrusted_app surfaceflinger:fifo_file rw_file_perms;
+allow untrusted_app gpu_device:chr_file rw_file_perms; 
+allow untrusted_app app_data_file:dir { search };
+allow untrusted_app storage_stub_file:dir { getattr };
+allow untrusted_app unlabeled:filesystem { getattr };
+allow untrusted_app unlabeled:dir rw_dir_perms;
+allow untrusted_app unlabeled:file rw_file_perms;

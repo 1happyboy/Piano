@@ -1,0 +1,10 @@
+<resources>
+    <bool name="allow_rotation">true</bool>
+    <bool name="config_largeHeap">false</bool>
+    <integer name="config_maxPageSnapDuration">450</integer>
+    
+    <!-- modify for improve system performance --> 
+    <bool name="use_lollipop_animate">false</bool>
+    <integer name="config_appsCustomizeRevealTime">100</integer>
+    <integer name="config_appsCustomizeFadeInTime">100</integer>
+</resources>

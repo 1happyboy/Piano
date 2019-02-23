@@ -18,13 +18,13 @@
 
 PRODUCT_PACKAGES := \
     Bluetooth \
-    CalendarProvider \
-    ContactsProvider \
     CertInstaller \
+    InputDevices \
+ #   CalendarProvider \
+    ContactsProvider \
     FusedLocation \
-    InputDevices
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     clatd \
     clatd.conf \
     pppd
@@ -39,8 +39,6 @@ PRODUCT_PACKAGES += \
     local_time.default
 
 PRODUCT_PACKAGES += \
-    BackupRestoreConfirmation \
-    DefaultContainerService \
     SettingsProvider \
     Shell \
     bcc \
@@ -50,10 +48,6 @@ PRODUCT_PACKAGES += \
     framework-res \
     installd \
     ims-common \
-    ip \
-    ip-up-vpn \
-    ip6tables \
-    iptables \
     gatekeeperd \
     keystore \
     keystore.default \
@@ -78,7 +72,13 @@ PRODUCT_PACKAGES += \
     telephony-common \
     voip-common \
     logd \
-    wifi-service
+    DefaultContainerService \
+#    wifi-service \
+    BackupRestoreConfirmation \
+    ip \
+    ip-up-vpn \
+    ip6tables \
+    iptables \
 
 # The order matters
 PRODUCT_BOOT_JARS := \

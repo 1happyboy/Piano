@@ -1,0 +1,18 @@
+# Additional rules for kernel
+allow kernel block_device:blk_file { read write open };
+
+# mr1
+allow kernel rpc_block_device:blk_file rw_file_perms;
+allow kernel self:capability mknod;
+allow kernel device:blk_file { create_file_perms };
+allow kernel block_device:blk_file rw_file_perms;
+allow kernel device:blk_file { create  setattr };
+
+allow kernel device:dir { write add_name };
+allow kernel device:chr_file { create setattr };
+allow kernel kernel:system { module_request };
+allow kernel metadata_file:dir rw_dir_perms;
+allow kernel metadata_file:file rw_file_perms;
+allow kernel log_device:dir rw_dir_perms;
+allow kernel log_device:chr_file rw_file_perms;
+allow kernel device:dir { remove_name };

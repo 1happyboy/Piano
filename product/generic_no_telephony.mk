@@ -20,23 +20,23 @@
 PRODUCT_PACKAGES := \
     Bluetooth \
     BluetoothMidiService \
-    OneTimeInitializer \
     Provision \
     SystemUI \
+#    OneTimeInitializer \
     WallpaperCropper
 
-ifneq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), vr)
-PRODUCT_PACKAGES += \
+#ifneq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), vr)
+#PRODUCT_PACKAGES += \
     Camera2 \
     Gallery2
-    ifneq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), box)
-    PRODUCT_PACKAGES += \
+#    ifneq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), box)
+#    PRODUCT_PACKAGES += \
         Music	\
         MusicFX 
-    endif
-endif
+#    endif
+#endif
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     clatd \
     clatd.conf \
     pppd \

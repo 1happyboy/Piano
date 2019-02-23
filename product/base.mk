@@ -101,12 +101,6 @@ PRODUCT_PACKAGES += \
     monkey \
     mtpd \
     ndc \
-    netd \
-    ping \
-    ping6 \
-    platform.xml \
-    pppd \
-    pm \
     racoon \
     run-as \
     schedtest \
@@ -121,7 +115,13 @@ PRODUCT_PACKAGES += \
     telecom \
     vdc \
     vold \
-    wm
+    wm \
+#    platform.xml \
+    pm \
+    netd \
+    ping \
+    ping6 \
+    pppd \
 
 
 PRODUCT_COPY_FILES := $(call add-to-product-copy-files-if-exists,\

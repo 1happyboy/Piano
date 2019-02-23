@@ -23,12 +23,9 @@ PRODUCT_DEVICE := generic
 PRODUCT_NAME := core
 
 PRODUCT_PACKAGES += \
-    BackupRestoreConfirmation \
-    DownloadProvider \
-    HTMLViewer \
-    MediaProvider \
     PackageInstaller \
-    SettingsProvider \
+    HTMLViewer \
+	SettingsProvider \
     Shell \
     StatementService \
     bcc \
@@ -46,8 +43,6 @@ PRODUCT_PACKAGES += \
     idmap \
     installd \
     ims-common \
-    ip \
-    ip-up-vpn \
     ip6tables \
     iptables \
     gatekeeperd \
@@ -75,8 +70,12 @@ PRODUCT_PACKAGES += \
     uiautomator \
     uncrypt \
     voip-common \
+	MediaProvider \
+#    BackupRestoreConfirmation \
     webview \
-    wifi-service
+    wifi-service \
+    ip \
+    ip-up-vpn \
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.webview.xml:system/etc/permissions/android.software.webview.xml
