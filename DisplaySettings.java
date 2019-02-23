@@ -263,7 +263,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         String summary;
         if (currentTimeout < 0) {
             // Unsupported value
-            summary = "";
+            //add start.
+            final CharSequence[] values = preference.getEntryValues();
+            final CharSequence[] entries = preference.getEntries();
+            int best = (values.length - 1);
+            summary = entries[best].toString();
+            //add end.
+            //summary = "";
         } else {
             final CharSequence[] entries = preference.getEntries();
             final CharSequence[] values = preference.getEntryValues();
