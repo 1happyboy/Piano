@@ -61,10 +61,10 @@ service charger /charger
     seclabel u:r:healthd:s0
 
 # Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
-service watchdogd /sbin/watchdogd 10 20
-    class core
-    disabled
-    seclabel u:r:watchdogd:s0
+#service watchdogd /sbin/watchdogd 10 20
+#    class core
+#    disabled
+#    seclabel u:r:watchdogd:s0
 
 
 # bugreport is triggered by holding down volume down, volume up and power
@@ -75,50 +75,50 @@ service bugreport /system/bin/dumpstate -d -p -B \
     oneshot
     keycodes 114 115 116
 
-service wfd /system/bin/wfd
-    class main
-    disabled
-    oneshot
+#service wfd /system/bin/wfd
+#    class main
+#    disabled
+#    oneshot
 
-service dhcpcd_wlan0 /system/bin/dhcpcd -aABDKL
-    class main
-    disabled
-    oneshot
+#service dhcpcd_wlan0 /system/bin/dhcpcd -aABDKL
+#    class main
+#    disabled
+#    oneshot
 
-service dhcpcd_p2p /system/bin/dhcpcd -aABKL
-    class main
-    disabled
-    oneshot
+#service dhcpcd_p2p /system/bin/dhcpcd -aABKL
+#    class main
+#    disabled
+#    oneshot
 
-service dhcpcd_bt-pan /system/bin/dhcpcd -aABDKL
-    class main
-    disabled
-    oneshot
+#service dhcpcd_bt-pan /system/bin/dhcpcd -aABDKL
+#    class main
+#    disabled
+#    oneshot
 
-service dhcpcd_eth0 /system/bin/dhcpcd -aABDKL
-    class late_start
-    disabled
-    oneshot
+#service dhcpcd_eth0 /system/bin/dhcpcd -aABDKL
+#    class late_start
+#    disabled
+#    oneshot
 
-service iprenew_wlan0 /system/bin/dhcpcd -n
-    class main
-    disabled
-    oneshot
+#service iprenew_wlan0 /system/bin/dhcpcd -n
+#    class main
+#    disabled
+#    oneshot
 
-service iprenew_eth0 /system/bin/dhcpcd -n
-    class late_start
-    disabled
-    oneshot
+#service iprenew_eth0 /system/bin/dhcpcd -n
+#    class late_start
+#    disabled
+#    oneshot
 
-service iprenew_p2p /system/bin/dhcpcd -n
-    class main
-    disabled
-    oneshot
+#service iprenew_p2p /system/bin/dhcpcd -n
+#    class main
+#    disabled
+#    oneshot
 
-service iprenew_bt-pan /system/bin/dhcpcd -n
-    class main
-    disabled
-    oneshot
+#service iprenew_bt-pan /system/bin/dhcpcd -n
+#    class main
+#    disabled
+#    oneshot
 
 # $_rbox_$_modify_$_lly: added 2015-03-10, for adding the mass storage supporting.
 on property:ro.target.product=box
@@ -186,11 +186,11 @@ on property:ro.factory.tool=1
 #on property:ro.rk.btchip=broadcom.bplus
 #    start gpsd
 
-service gpsd  /system/bin/glgps -c /system/etc/gps/gpsconfig.xml
-    class main
-    disabled
-    user gps
-    group system
+#service gpsd  /system/bin/glgps -c /system/etc/gps/gpsconfig.xml
+#    class main
+#    disabled
+#    user gps
+#    group system
 
 #stresstest
 service getbootmode /system/bin/getbootmode.sh
