@@ -71,7 +71,8 @@ BOARD_EGL_CFG ?= vendor/rockchip/common/gpu/PVR540/egl.cfg
 endif
 
 TARGET_BOOTLOADER_BOARD_NAME ?= rk30sdk
-TARGET_NO_BOOTLOADER ?= true
+#TARGET_NO_BOOTLOADER ?= true
+TARGET_NO_BOOTLOADER ?= false
 BOARD_USE_LOW_MEM ?= false
 DEVICE_PACKAGE_OVERLAYS += device/rockchip/common/overlay
 TARGET_RELEASETOOLS_EXTENSIONS := device/rockchip/common
@@ -80,7 +81,10 @@ BOARD_HAL_STATIC_LIBRARIES ?= libdumpstate.$(TARGET_PRODUCT) libhealthd.$(TARGET
 
 //MAX-SIZE=512M, for generate out/.../system.img
 BOARD_SYSTEMIMAGE_PARTITION_SIZE ?= 1073741824
-BOARD_FLASH_BLOCK_SIZE ?= 131072
+##BOARD_SYSTEMIMAGE_PARTITION_SIZE ?= 8589934592
+BOARD_USERDATAIMAGE_PARTITION_SIZE ?= 8589934592
+##BOARD_FLASH_BLOCK_SIZE ?= 131072
+BOARD_FLASH_BLOCK_SIZE ?= 4096
 
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
@@ -150,8 +154,10 @@ BOARD_USES_GENERIC_AUDIO ?= true
 
 # Wifi&Bluetooth
 BOARD_HAVE_BLUETOOTH ?= true
+#BLUETOOTH_USE_BPLUS ?= false
+#BOARD_HAVE_BLUETOOTH_BCM ?= false
 BLUETOOTH_USE_BPLUS ?= false
-BOARD_HAVE_BLUETOOTH_BCM ?= false
+BOARD_HAVE_BLUETOOTH_BCM ?= true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/rockchip/$(TARGET_PRODUCT)/bluetooth
 #-include device/rockchip/$(TARGET_PRODUCT)/wifi_bt.mk
 include device/rockchip/common/wifi_bt_common.mk
